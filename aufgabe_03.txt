@@ -1,0 +1,24 @@
+import random # Importiert das Modul für die zufällige Zahl
+
+geheime_zahl = random.randint(1, 100) # # Generiere eine zufällige Zahl zwischen 1 und 100
+versuche = 7  # Setze die Anzahl der Versuche auf 7
+
+### Spiel ###
+
+while versuche > 0:
+    hinweis = int(input("Wählen Sie eine Zahl zwischen 1 und 100: "))
+    if hinweis == geheime_zahl:
+        print("Gewonnen! Die geheime Zahl ist nicht mehr geheim.") 
+        break # Das Spiel endet , wenn die Zahl richtig ist.
+    elif hinweis < geheime_zahl:
+        print("Die Zahl ist größer. Veruch es nochmal.") 
+    else:
+        print("Die Zahl ist kleiner. Versuch es nochmal.")
+    versuche -= 1
+    
+    # Wenn keine Versuche mehr übrig sind
+    if versuche == 0:
+        print(f"Verloren. Die geheime Zahl war {geheime_zahl}. Einfach nochmals probieren.")
+
+
+

@@ -1,0 +1,27 @@
+
+
+continents = ["Afrika", "Antarktis", "Asien", "Australien und Ozeanien", "Europa","Nordamerika", "Südamerika"]
+stuff = ["Asien", "Max", 101, "Monika", "China", "Simbabwe", "Antarktis"]
+
+# Alle Kontinente ausgeben
+print("Alle Kontinente:")
+for x in continents:
+    print(x) 
+
+# nur bewohnete Kontinente ausgeben.
+print("\nBewohnte Kontinente:") # \n wird verwendet, um die Abschnitt in der Ausgabe zu trennen, anstatt  print("")
+for x in continents:
+    if x != "Antarktis":
+        print(x)
+
+# Nur kontinente aus der Liste stuff filtern 
+print("\nKontinente in stuff:") 
+kontinent = [x for x in stuff if x in continents]
+print(kontinent)
+
+# Anzahl der Kontinente in stuff zählen
+print("\nAnzahl der Kontinente in stuff:", len(kontinent))
+
+
+
+

@@ -1,0 +1,33 @@
+# 1. Rabattberechnung für einen einzelnen Preis
+price = float(input("Gib den Preis ein: "))
+
+def berechne_rabatt(preis):
+    if preis <= 20:
+        return preis * 0.80  # 20 % Rabatt
+    elif preis <= 50:
+        return preis * 0.60  # 40 % Rabatt
+    else:
+        return preis * 0.40  # 60 % Rabatt
+new_price = berechne_rabatt(price) # Berechnung des rabattierten Preises
+print(f"Der Preis mit Rabatt beträgt: {new_price} €")
+
+############################################################################
+# 2. Berechnung rabattierter Preise für eine Liste von Preisen
+prices = [40, 21, 29, 50, 101] # Gegebene Liste von Preisen
+new_prices = []
+
+for price in prices:
+    new_price = berechne_rabatt(price)  # Berechnung des rabattierten Preises mit der Funktion berechne_rabatt
+    new_prices.append(new_price) # Hinzufügen des rabattierten Preises zur neuen Liste
+print("Rabattierte Preise aus der Liste:", new_prices)
+
+#################################################################
+# 3. Bereinigung der chaos-Liste und Rabattberechnung der alten Preise
+chaos = ["old price: 40", "new price: 21", "old price: 29", "old price: 50", "new price: 101"]
+order = []
+# Verarbeitung der chaos-Liste
+for item in chaos:
+    old_price = float(item.split(":")[1].strip()) # Extrahiere den Preis aus dem String und konvertiere ihn in eine Zahl
+    new_price = berechne_rabatt(old_price)  # Berechnung des rabattierten Preises mit der Funktion berechne_rabatt
+    order.append(new_price) # Hinzufügen des rabattierten Preises zur bereinigten Liste
+print("Bereinigte Liste mit neuen Preisen:", order)

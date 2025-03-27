@@ -1,0 +1,53 @@
+###### Mitgliedern unsere Gruppe: Maksym Otchych; Sebastian Neukirchen; Anastasiia Kelnik.#######
+
+# num1 = float(input("Geben Sie die erste Zahl ein: "))
+# num2 = float(input("Geben Sie die zweite Zahl ein: "))
+# operation = input("Geben Sie eine Operation ein (+, -, *, /): ")
+
+# if operation == '+':
+#     print("Ergebnis:", num1 + num2)
+# elif operation == '-':
+#     print("Ergebnis:", num1 - num2)
+# elif operation == '*':
+#     print("Ergebnis:", num1 * num2)
+# elif operation == '/':
+#     if num2 != 0:
+#         print("Ergebnis:", num1 / num2)
+#     else:
+#         print("Fehler: Division durch Null ist nicht erlaubt!") 
+
+zahl1 = float(input("Geben Sie die erste Zahl ein:")) # input() gibt immer einen String zurück und wir müssen es mit float() in eine Zahl umwandeln.
+zahl2 = float(input("Geben Sie die zweite Zahl ein:"))
+operation = input("Genen Sie eine Operation ein (+, -, *, /): ") # input() gibt immer einen String zurück.
+
+if operation == '+': # Wenn die Operation + ist, wird die Addition duchgeführt.
+    print("Ergebnis:", zahl1 + zahl2) 
+if operation == '-':
+    print("Ergebnis:", zahl1 - zahl2) # wenn die Operation - ist, wird die Subtraktion duchgefürt.
+if operation == '*':
+    print("Ergebnis:", zahl1 * zahl2) # wird die Multiplikation durchgeführt.
+if operation == '/':
+    if zahl2 != 0: # wird überprüft, ob die zweite Zahl ungleich 0 ist. Falls ja, wird die Division durchgeführt.
+        print("Ergebnis:", zahl1 / zahl2) # wird die Division durchgeführt. 
+    else:
+        print("Fehler: Division durch Null ist nicht erlaubt!")            
+        
+###### Zusammenfassung #######
+''' 
+if: Startet die bedingte Anweisung
+elif: Überprüft zusätzliche Bedingungen, wenn die vorherigen False waren.
+elise: Wird ausgeführt, wenn alle Bedingungen Fals waren.
+Die Struktur ist nützlich, um Entscheidungen im Code zu treffen und unterschiedliche Aktionen basierend auf Bedingungen auszuführen. 
+'''    
+
+'''
+Gleich: a == b
+Ungleich: a != b
+Weniger als: a < b 
+Kleiner oder gleich a <= b
+Größer als: a > b
+Größer oder gleich a >=b
+
+
+'''
+
